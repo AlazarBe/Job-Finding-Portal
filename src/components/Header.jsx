@@ -5,26 +5,32 @@ const navLinks = [
   {
     name: "Home",
     to: "/",
+    style: "hover:text-blue-500 transition-colors duration-200",
   },
   {
     name: "Jobs",
     to: "/jobs",
+    style: "hover:text-blue-500 transition-colors duration-200",
   },
   {
     name: "About",
     to: "/about",
+    style: "hover:text-blue-500 transition-colors duration-200",
   },
   {
     name: "Contact Us",
     to: "/contact",
+    style: "hover:text-blue-500 transition-colors duration-200",
   },
   {
     name: "Login",
     to: "/login",
+    style: "hover:text-blue-500 transition-colors duration-200",
   },
   {
     name: "Register",
     to: "/register",
+    style:" font-bold bg-green-400 p-2 px-4 transition-colors duration-200"
   },
 ];
 
@@ -34,9 +40,9 @@ function Header() {
       <h1 className="font-bold text-3xl">Job Portal</h1>
       <div>
         <nav>
-          <ul className="flex gap-4">
+          <ul className="flex gap-4 items-center">
             {navLinks.map((link) => (
-              <li key={link.name} className="hover:text-blue-500 transition-colors duration-200">
+              <li key={link.name} className={link.style}>
                 <NavLink
                   className={({ isActive }) => (isActive ? "underline" : "")}
                   to={link.to}
