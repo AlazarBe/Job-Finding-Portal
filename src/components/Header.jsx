@@ -30,15 +30,15 @@ const navLinks = [
   {
     name: "Register",
     to: "/register",
-    style:" font-bold bg-green-400 p-2 px-4 transition-colors duration-200"
+    style:" hover:bg-green-500 font-bold bg-green-400 p-2 px-4 transition-colors duration-200"
   },
 ];
 
 function Header() {
   return (
-    <div className="w-6xl mx-auto flex justify-between mt-3 items-center">
+    <div className="relative z-100 w-6xl mx-auto flex justify-between p-2 items-center">
       <h1 className="font-bold text-3xl">Job Portal</h1>
-      <div>
+      <div className="sm:hidden md:block">
         <nav>
           <ul className="flex gap-4 items-center">
             {navLinks.map((link) => (
