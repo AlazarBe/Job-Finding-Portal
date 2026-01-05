@@ -14,7 +14,7 @@ function App() {
      <Routes>
       <Route element={<Layout />} >
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<div>About Page</div>} />
+      <Route path="/about" element={<div className="h-screen">About Page</div>} />
       </Route>
      </Routes>
      </BrowserRouter>

@@ -37,7 +37,7 @@ const navLinks = [
 function Header() {
   return (
     <div className="relative z-100 w-6xl mx-auto flex justify-between p-2 items-center">
-      <h1 className="font-bold text-3xl">Job Portal</h1>
+      <h1 className="font-bold text-3xl font-secondary">Job Portal</h1>
       <div className="sm:hidden md:block">
         <nav>
           <ul className="flex gap-4 items-center">

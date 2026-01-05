@@ -1,6 +1,6 @@
 @import "tailwindcss";
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,7 +13,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@theme {
+  --font-primary:  "Figtree", sans-serif;
+  --font-secondary: "Monoton", sans-serif;
 
+}
 
 
 @media (prefers-color-scheme: light) {
