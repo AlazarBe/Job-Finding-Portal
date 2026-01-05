@@ -22,7 +22,11 @@ const navLinks = [
     to: "/contact",
     style: "hover:text-blue-500 transition-colors duration-200",
   },
-  {
+
+];
+
+const regLinks=[
+    {
     name: "Login",
     to: "/login",
     style: "hover:text-blue-500 transition-colors duration-200",
@@ -32,8 +36,7 @@ const navLinks = [
     to: "/register",
     style:" hover:bg-green-500 font-bold bg-green-400 p-2 px-4 transition-colors duration-200"
   },
-];
-
+]
 function Header() {
   return (
     <div className="relative z-100 w-6xl mx-auto flex justify-between p-2 items-center">
@@ -54,6 +57,20 @@ function Header() {
           </ul>
         </nav>
       </div>
+      <ul className="flex items-center gap-4">
+        {
+          regLinks.map((link) => (
+            <li key={link.name} className={link.style}>
+              <NavLink
+                className={({ isActive }) => (isActive ? "underline" : "")}
+                to={link.to}
+              >
+               {link.name}
+              </NavLink>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   );
 }
